@@ -14,17 +14,20 @@ function topo() {
 
 function login(){
     var logado = 0;
-    var usuario = document.getElementById('usuario')[0].value;
-    usuario = usuario.toLowercase();
-    var senha = document.getElementById('senha')[1].value;
-    senha = senha.toLowercase();
+    var usuario = document.getElementById('usuario').value;
+    usuario = usuario.toLowerCase();
+    
+    var senha = document.getElementById('senha').value;
+    senha = senha.toLowerCase();
 
-    if(usuario == "admin" && senha == "123456"){
-        window.location = "index.html";
+    if(usuario === "admin" && senha === "123456"){
         logado = 1;
     }
 
-    if(logado == 0){
+    if (logado === 1) {
+        window.location = "index.html";
+    } 
+    else {
         alert("Acesso Negado. Dados incorretos");
     }
 
@@ -34,7 +37,5 @@ function login(){
 
 function cadastro(){
     alert("cadastrado com sucesso!");
-    window.Location.href = "index.html";
+    window.location.href = "index.html";
 }
-
-[usuario='teste',senha='123456']
